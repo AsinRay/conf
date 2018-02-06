@@ -1,0 +1,22 @@
+server:
+  port: 8888
+
+spring:
+  profiles:
+    active: cloud
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://
+          basedir: target/config
+management:
+  context-path: /admin
+
+logging:
+  level:
+    com.netflix.discovery: 'OFF'
+    org.springframework.cloud: 'DEBUG'
+
+
+
